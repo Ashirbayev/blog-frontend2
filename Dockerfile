@@ -6,10 +6,8 @@ WORKDIR /usr/src/app
 # Копируем package.json и package-lock.json
 COPY package*.json ./
 
-RUN npm install --legacy-peer-deps
 
-RUN npm install --force
-
+RUN npm install
 
 # Копируем весь проект
 COPY . .
